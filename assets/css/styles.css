@@ -1,0 +1,132 @@
+.labels {
+  color: inherit;
+  margin-bottom: 0!important;
+  font-family: sans-serif;
+  /*margin-right: 10%;*/
+  min-width: 55%;
+  margin-top: 2%;
+}
+
+input.form-control.form-control-sm {
+  width: 16%;
+  margin-left: 5%;
+  margin-bottom: -50%;
+  /*height: 20px;*/
+  color: white;
+}
+
+input:focus {
+  border-bottom: 0px solid #ffffff;
+}
+
+input.form-control.form-control-sm {
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  border-bottom: 2px solid rgba(255,255,255,0.57);
+  background-color: transparent;
+  text-align: right;
+}
+
+input.form-control.form-control-sm:hover {
+  border-bottom: 2px solid rgba(255,255,255,0.9);
+}
+
+input {
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  border-bottom: 2px solid rgba(255,255,255,0.57);
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#div-general {
+  height: 100vh;
+}
+
+body {
+  height: 300vh;
+  overflow: hidden;
+}
+
+#calcular, #volver {
+  border-radius: 0;
+  width: 40%;
+  background-color: transparent;
+  margin-top: 5%;
+  color: #ffffff;
+  margin-bottom: 5%;
+  border-color: white;
+}
+
+img {
+  height: auto;
+  width: 70%;
+  margin-left: 20%;
+}
+
+.col-12.col-lg-6.col-xl-5.offset-xl-1 {
+  padding: 2%;
+}
+
+#div-resultados {
+  border-radius: 10px;
+  /*background: linear-gradient(135deg, #172a74, #2173af);*/
+  background-color: white;
+  color: black;
+}
+
+#div-form {
+  color: white;
+}
+
+#div-resultados {
+  color: black;
+}
+
+.blue {
+  background-color: rgb(37,82,170);
+  color: white;
+  max-width: 50px;
+  min-width: 50px;
+  font-size: 10px;
+}
+
+#r1, #r2, #r3, #r4, #r5, #r6, #r7, .blanco > tr {
+  min-width: 50px;
+  max-width: 50px;
+  background-color: rgb(213,218,237);
+  font-size: 15px;
+}
+
+.table-responsive.resultados2 {
+  font-size: 15px;
+}
+
+#div-resultados {
+  padding-right: 20%;
+}
+
+.titulo-resultado {
+  color: black;
+  font-variant-caps: all-small-caps;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+#div_usuarios {
+  /*background: linear-gradient(135deg, rgba(23,42,116,0.34), rgba(33,115,175,0.39));*/
+}
+

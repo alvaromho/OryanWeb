@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Oryan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-4---Table-Fixed-Header.css">
+    <link rel="stylesheet" href="assets/css/Button-FAB.css">
+    <link rel="stylesheet" href="assets/css/Button-Outlines---Pretty.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Modal-commerce-popup-button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search-1.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search.css">
+</head>
+
+<body style="font-family: Roboto, sans-serif;">
+    <div id="div-general">
+        <div id="div-general" class="header-blue" style="background-color: rgb(255,255,255);">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+                <div class="container-fluid"><a class="navbar-brand" href="#">John O'Ryan&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Calcular</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Registros</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Usuarios</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Clientes</a></li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group"><label for=""></label></div>
+                        </form><span class="navbar-text"> </span></div>
+                </div>
+            </nav>
+            <div class="container hero" id="contenedor">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center" id="div-form">
+
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-11 col-lg-11 col-md-12 col-sm-12 col-xs-12">
+                                    <h1 class="text-capitalize">Tareas</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BOTONES-->
+                        <div class="container-fluid mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#NuevaTarea" onclick="limpiar_nueva_tarea();">
+                                                <i class="fas fa-calendar-plus fa-sm" data-toggle="tooltip" data-placement="top" title="Agendar una Tarea" aria-hidden="true"></i><span class="sr-only">Agendar una Tarea</span> Nueva Tarea
+                                            </button>
+                                        </div>
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-outline-primary active">
+                                                <input type="radio" name="radio-tareas" value="1" autocomplete="off" onchange="cambio_tarea();"><i class="mdi mdi-account" data-toggle="tooltip" data-placement="top" title="Mis Proyectos"></i>
+                                            </label>
+                                            <label class="btn btn-outline-primary">
+                                                <input type="radio" name="radio-tareas" value="2" autocomplete="off" onchange="cambio_tarea();"><i class="mdi mdi-account-multiple" data-toggle="tooltip" data-placement="top" title="Todos los Proyectos"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <table class="table table-sm" id="tar_dibujar_mis_tareas">                <thead>
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Nombre</th>
+                                            <th scope="col" class="text-center align-middle">Descripción</th>
+                                            <th scope="col" class="text-center align-middle">Proyecto</th>
+                                            <th scope="col" class="text-center align-middle">Horas</th>
+                                            <th scope="col" class="text-center align-middle">Fecha Limite</th>
+                                            <th scope="col" class="text-center align-middle">Acciones</th>
+                                        </tr>
+                                        </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Arreglos Registro de Actividades</td>
+                                                <td class="text-left align-middle">Arreglos de modales</td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">4hr</td>
+                                                <td class="text-center align-middle">2019-09-23</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('90');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('90','Arreglos Registro de Actividades');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Capacitacion Verbio </td>
+                                                <td class="text-left align-middle">Capacitar a Karla - IVR Cognitivos </td>
+                                                <td class="text-left align-middle">Maqueta Speech Analitycs</td>
+
+                                                <td class="text-center align-middle">8hr</td>
+                                                <td class="text-center align-middle">2019-12-27</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('404');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('404','Capacitacion Verbio ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Casos de Uso Energuate </td>
+                                                <td class="text-left align-middle">Casos de Uso Energuate </td>
+                                                <td class="text-left align-middle">IVR Cognitivo Energuate</td>
+
+                                                <td class="text-center align-middle">8hr</td>
+                                                <td class="text-center align-middle">2019-09-27</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('87');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('87','Casos de Uso Energuate ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Chatbot Enel - Api Watson</td>
+                                                <td class="text-left align-middle">Disponibilizar Watson como una api a consutar por sgcs</td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">20hr</td>
+                                                <td class="text-center align-middle">2019-12-06</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('299');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('299','Chatbot Enel - Api Watson');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Chatbot Enel - Integración funtes externas </td>
+                                                <td class="text-left align-middle">Llamar a fuentes externas desde Watson y afectar el flujo del dialogo según esta fuente </td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">40hr</td>
+                                                <td class="text-center align-middle">2019-11-29</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('298');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('298','Chatbot Enel - Integración funtes externas ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Conectar Agenda con fuente de datos </td>
+                                                <td class="text-left align-middle">Sincronizar agenda de Turismo Rays con base de datos. </td>
+                                                <td class="text-left align-middle">Agenda Turismo RAYS</td>
+
+                                                <td class="text-center align-middle">4hr</td>
+                                                <td class="text-center align-middle">2019-10-25</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('209');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('209','Conectar Agenda con fuente de datos ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Configuración SSl </td>
+                                                <td class="text-left align-middle">configurar subdominio y certificado ssl </td>
+                                                <td class="text-left align-middle">Dashboard Enel - Tarejtero de Avisos </td>
+
+                                                <td class="text-center align-middle">2hr</td>
+                                                <td class="text-center align-middle">2020-01-21</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('465');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('465','Configuración SSl ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Configurar Subdominio </td>
+                                                <td class="text-left align-middle">Configurar dominio o subdominio enmascarado</td>
+                                                <td class="text-left align-middle">Tarjetas ENEL</td>
+
+                                                <td class="text-center align-middle">2hr</td>
+                                                <td class="text-center align-middle">2020-01-21</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('466');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('466','Configurar Subdominio ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Crear instancia de IVR </td>
+                                                <td class="text-left align-middle">Copiar instancia de cobranza La Polar </td>
+                                                <td class="text-left align-middle">Demo IVR cobranza Banco Avance</td>
+
+                                                <td class="text-center align-middle">1hr</td>
+                                                <td class="text-center align-middle">2019-10-08</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('135');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('135','Crear instancia de IVR ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Desarollo Modulo Speech Analitycs</td>
+                                                <td class="text-left align-middle">Desarollo Modulo Speech Analitycs</td>
+                                                <td class="text-left align-middle">Maqueta Speech Analitycs</td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2019-12-20</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('351');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('351','Desarollo Modulo Speech Analitycs');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Desarrllo IVR </td>
+                                                <td class="text-left align-middle">Desarrllo IVR </td>
+                                                <td class="text-left align-middle">Piloto IVR Outbound  Incremento de Cupo</td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2020-02-20</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('539');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('539','Desarrllo IVR ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Diagrama de Flujo </td>
+                                                <td class="text-left align-middle">Diagrama de Flujo Latam </td>
+                                                <td class="text-left align-middle">LATAM </td>
+
+                                                <td class="text-center align-middle">8hr</td>
+                                                <td class="text-center align-middle">2019-10-04</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('116');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('116','Diagrama de Flujo ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Diseño Flujo Latam </td>
+                                                <td class="text-left align-middle">Terminar Diagrama de Flujo de Latam</td>
+                                                <td class="text-left align-middle">LATAM </td>
+
+                                                <td class="text-center align-middle">8hr</td>
+                                                <td class="text-center align-middle">2019-09-26</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('91');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('91','Diseño Flujo Latam ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Documentacion Energuate</td>
+                                                <td class="text-left align-middle">Documentacion</td>
+                                                <td class="text-left align-middle">Dashboard Enel - Tarejtero de Avisos </td>
+
+                                                <td class="text-center align-middle">5hr</td>
+                                                <td class="text-center align-middle">2019-09-10</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('49');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('49','Documentacion Energuate');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Entrega Plataforma Registro de Actividades</td>
+                                                <td class="text-left align-middle">Presentación con la explicación del funcionamiento de la plataforma de registro de actividades</td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">3hr</td>
+                                                <td class="text-center align-middle">2019-08-14</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('8');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('8','Entrega Plataforma Registro de Actividades');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Entrevista a practicantes</td>
+                                                <td class="text-left align-middle">Entrevista a practicantes</td>
+                                                <td class="text-left align-middle">Otros</td>
+
+                                                <td class="text-center align-middle">4hr</td>
+                                                <td class="text-center align-middle">2019-12-02</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('325');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('325','Entrevista a practicantes');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Extras Registro de Actividades</td>
+                                                <td class="text-left align-middle">Contempla: Capacitaciones, correcciones de data, correcciónes necesarias de emergencia, etc. </td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">30hr</td>
+                                                <td class="text-center align-middle">2019-10-31</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('115');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('115','Extras Registro de Actividades');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Flujo Energuate</td>
+                                                <td class="text-left align-middle">Crear Diagrama de Flujo de Energuate</td>
+                                                <td class="text-left align-middle">IVR Cognitivo Energuate</td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2019-09-27</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('88');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('88','Flujo Energuate');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Investigación Chatbot IBM</td>
+                                                <td class="text-left align-middle">Curso de como crear un chatbot con watson assistance de ibm </td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">6hr</td>
+                                                <td class="text-center align-middle">2019-10-11</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('128');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('128','Investigación Chatbot IBM');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Investigacion IBM</td>
+                                                <td class="text-left align-middle">investigación de integraciónde IBM Watson</td>
+                                                <td class="text-left align-middle">Maqueta Speech Analitycs</td>
+
+                                                <td class="text-center align-middle">7hr</td>
+                                                <td class="text-center align-middle">2019-12-24</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('405');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('405','Investigacion IBM');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Investigación y desarrollo, Watson</td>
+                                                <td class="text-left align-middle">Investigación y desarrollo, Watson</td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">3hr</td>
+                                                <td class="text-center align-middle">2019-09-11</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('60');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('60','Investigación y desarrollo, Watson');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Latam - Soportes</td>
+                                                <td class="text-left align-middle">Finalizar Maqueta con las funcionalidades hasta ahora abordadas</td>
+                                                <td class="text-left align-middle">LATAM </td>
+
+                                                <td class="text-center align-middle">6hr</td>
+                                                <td class="text-center align-middle">2019-09-11</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('50');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('50','Latam - Soportes');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Licencia Médica </td>
+                                                <td class="text-left align-middle">Licencia Médica </td>
+                                                <td class="text-left align-middle">Comparación de Transcripctores</td>
+
+                                                <td class="text-center align-middle">0hr</td>
+                                                <td class="text-center align-middle">2019-12-31</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('342');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('342','Licencia Médica ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Maqueta Cobranza Outbound</td>
+                                                <td class="text-left align-middle">Mover Maqueta de cobranza a outbound </td>
+                                                <td class="text-left align-middle">Maqueta cobranza outbound</td>
+
+                                                <td class="text-center align-middle">30hr</td>
+                                                <td class="text-center align-middle">2019-11-29</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('306');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('306','Maqueta Cobranza Outbound');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Monitoreo de Maquetas</td>
+                                                <td class="text-left align-middle">Monitoreo continuo del servidor Comercial 2</td>
+                                                <td class="text-left align-middle">Mantenimiento de Maquetas </td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2020-02-14</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('498');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('498','Monitoreo de Maquetas');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Mover Maquetas a Ambiente Comercial 2</td>
+                                                <td class="text-left align-middle">Mover Maquetas a Ambiente Comercial 2:
+                                                    "Cobranza Clo ( ex La Polar)
+                                                    "
+                                                    "Banco Imagina
+                                                    "
+                                                    Seguro Clinica las Condes v2.0
+                                                    Upselling Clinica las Condes
+                                                    Movistar Colombia
+                                                    Latam
+                                                    ETB</td>
+                                                <td class="text-left align-middle">Mantenimiento de Maquetas </td>
+
+                                                <td class="text-center align-middle">40hr</td>
+                                                <td class="text-center align-middle">2020-02-20</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('494');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('494','Mover Maquetas a Ambiente Comercial 2');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Normalización Base de Datos </td>
+                                                <td class="text-left align-middle">Actualizar base de datos para normalizar </td>
+                                                <td class="text-left align-middle">Registro de Actividad 1</td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2020-02-07</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('483');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('483','Normalización Base de Datos ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Orden Maquetas / QA Maquetas</td>
+                                                <td class="text-left align-middle">Ordenar y Disponibilizar Maquetas  con QA realizado </td>
+                                                <td class="text-left align-middle">Evaluación de estado maquetas IVR Cognitivo</td>
+
+                                                <td class="text-center align-middle">20hr</td>
+                                                <td class="text-center align-middle">2019-11-08</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('247');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('247','Orden Maquetas / QA Maquetas');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Página Chatbot Enel </td>
+                                                <td class="text-left align-middle">Página Chatbot Enel </td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">4hr</td>
+                                                <td class="text-center align-middle">2019-12-05</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('326');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('326','Página Chatbot Enel ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Página Clientes</td>
+                                                <td class="text-left align-middle">Terminar Página </td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">8hr</td>
+                                                <td class="text-center align-middle">2019-07-19</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('2');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('2','Página Clientes');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Planificación y seguimiento de proyecto - Energuate</td>
+                                                <td class="text-left align-middle">Planificación y seguimiento de proyecto</td>
+                                                <td class="text-left align-middle">Dashboard Enel - Tarejtero de Avisos </td>
+
+                                                <td class="text-center align-middle">16hr</td>
+                                                <td class="text-center align-middle">2019-09-10</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('47');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('47','Planificación y seguimiento de proyecto - Energuate');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Qa Enel</td>
+                                                <td class="text-left align-middle">Qa Enel en Serv. Qa enel</td>
+                                                <td class="text-left align-middle">IVR Cognitivo Enel </td>
+
+                                                <td class="text-center align-middle">6hr</td>
+                                                <td class="text-center align-middle">2019-10-23</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('214');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('214','Qa Enel');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">QA Maquetas</td>
+                                                <td class="text-left align-middle">Dos de CLC, La Polar, Telebanco y Movistar Colombia </td>
+                                                <td class="text-left align-middle">Evaluación de estado maquetas IVR Cognitivo</td>
+
+                                                <td class="text-center align-middle">12hr</td>
+                                                <td class="text-center align-middle">2019-10-25</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('212');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('212','QA Maquetas');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">RA - Modificar paneles PBI</td>
+                                                <td class="text-left align-middle">Modificar paneles de PBI </td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">10hr</td>
+                                                <td class="text-center align-middle">2019-11-29</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('302');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('302','RA - Modificar paneles PBI');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Reunion Avance Chatbot </td>
+                                                <td class="text-left align-middle">Reunión con Malatesta</td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">10hr</td>
+                                                <td class="text-center align-middle">2019-12-20</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('324');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('324','Reunion Avance Chatbot ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Reunion Energuate </td>
+                                                <td class="text-left align-middle">Video Conferencia por Skype </td>
+                                                <td class="text-left align-middle">IVR Cognitivo Energuate</td>
+
+                                                <td class="text-center align-middle">1hr</td>
+                                                <td class="text-center align-middle">2019-09-23</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('89');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('89','Reunion Energuate ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Reunion Multilenguaje </td>
+                                                <td class="text-left align-middle">Reunion Multilenguaje </td>
+                                                <td class="text-left align-middle">LATAM </td>
+
+                                                <td class="text-center align-middle">3hr</td>
+                                                <td class="text-center align-middle">2020-01-21</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('467');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('467','Reunion Multilenguaje ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Reuniones Energuate - Casos de Uso </td>
+                                                <td class="text-left align-middle">Reuniones</td>
+                                                <td class="text-left align-middle">IVR Cognitivo Energuate</td>
+
+                                                <td class="text-center align-middle">10hr</td>
+                                                <td class="text-center align-middle">2019-10-31</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('112');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('112','Reuniones Energuate - Casos de Uso ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Revisar Panel Proyectos </td>
+                                                <td class="text-left align-middle">Finalizar QA</td>
+                                                <td class="text-left align-middle">QA Registro de Actividades</td>
+
+                                                <td class="text-center align-middle">1hr</td>
+                                                <td class="text-center align-middle">2019-09-05</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('13');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('13','Revisar Panel Proyectos ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Revisión y aprovación de diagrama Chatbot Enel </td>
+                                                <td class="text-left align-middle">Revisión y aprovación de diagrama Chatbot Enel </td>
+                                                <td class="text-left align-middle">Chatbot Enel </td>
+
+                                                <td class="text-center align-middle">20hr</td>
+                                                <td class="text-center align-middle">2019-11-22</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('291');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('291','Revisión y aprovación de diagrama Chatbot Enel ');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Soporte de app de Gestión - Clo</td>
+                                                <td class="text-left align-middle">Soporte de app de Gestión</td>
+                                                <td class="text-left align-middle">Desarrollo Registro de Actividades </td>
+
+                                                <td class="text-center align-middle">6hr</td>
+                                                <td class="text-center align-middle">2019-09-10</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('48');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('48','Soporte de app de Gestión - Clo');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-left align-middle">Ver Conferencia</td>
+                                                <td class="text-left align-middle">Ver Conferencia</td>
+                                                <td class="text-left align-middle">Microsoft Machine Learning</td>
+
+                                                <td class="text-center align-middle">1hr</td>
+                                                <td class="text-center align-middle">2019-08-13</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" onclick="autocompletar_tarea('7');" data-target="#EditarTarea">
+                                                            <i class="fas fa-edit fa-sm" data-toggle="tooltip" data-placement="top" title="Editar Tarea" aria-hidden="true"></i><span class="sr-only">Editar Tarea</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" onclick="llenar_modal_eliminar('7','Ver Conferencia');" data-target="#EliminarTarea">
+                                                            <i class="fas fa-trash-alt fa-sm" data-toggle="tooltip" data-placement="top" title="Eliminar la Tarea" aria-hidden="true"></i><span class="sr-only">Eliminar la Tarea</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>  <div id="boton_grafico" onclick="click_graficos()" style="display:none;background-color:rgb(37,82,170)"class="fab">
+        <a href="#graficos"><i style="font-size: 30px; color: white" class="fas fa-chart-line"></i></a>
+    </div>
+  <div id="boton_volver2"  onclick="click_volver2()" style="display:none;background-color:rgb(37,82,170)"class="fab">
+        <a href="#resultados"><i style="font-size: 30px; color: white" class="fas fa-undo-alt"></i></a>
+    </div>
+</div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="datos-estimacion">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-uppercase">Parametros para estimación</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="color: rgb(0,0,0);"></div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">Guardar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Modal-commerce-popup-button.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/tabla.js"></script>
+    <script src="assets/js/Table-with-search.js"></script>
+</body>
+
+</html>

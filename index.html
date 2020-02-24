@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Oryan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-4---Table-Fixed-Header.css">
+    <link rel="stylesheet" href="assets/css/Button-FAB.css">
+    <link rel="stylesheet" href="assets/css/Button-Outlines---Pretty.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Modal-commerce-popup-button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search-1.css">
+    <link rel="stylesheet" href="assets/css/Table-with-search.css">
+</head>
+
+<body style="font-family: Roboto, sans-serif;">
+    <div id="div-general">
+        <div id="div-general" class="header-blue" style="background-color: rgb(255,255,255);">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+                <div class="container-fluid"><a class="navbar-brand" href="#">John O'Ryan&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Calcular</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Registros</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Usuarios</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Clientes</a></li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group"><label for="search-field"></label></div>
+                        </form><span class="navbar-text"> </span></div>
+                </div>
+            </nav>
+            <div class="container hero" id="contenedor">
+                <div class="row">
+                    <div class="col-md-6" id="div-form"><a class="bs4_modal_trigger" href="" data-modal-id="datos-estimacion" data-toggle="modal" style="color: #ffffff;">insertar Parametros para estimación&nbsp;&nbsp;<i class="fa fa-table"></i></a>
+                        <form class="labels" style="margin-right: -5%;margin-left: 5%;margin-top: 3%;margin-bottom: 10%;">
+                            <div class="form-group text-center row"><label class="text-uppercase labels">Altura Promedio Pila</label><input class="form-control form-control-sm" type="number" id="f1" step="0.001" value="7.99"></div>
+                            <div class="form-group text-center row"><label class="text-uppercase labels">Volumen Aparente (M3 Ap)</label><input class="form-control form-control-sm" type="number" id="f2" value="11350"></div>
+                            <div class="form-group text-center row"><label class="text-uppercase labels">Porcentaje Peso Seco (%)</label><input class="form-control form-control-sm" type="number" id="f3" step="0.01" value="62.50"></div>
+                            <div class="form-group text-center row"><label class="text-uppercase labels">Presión Superficie (p.S) (TON/M2)</label><input class="form-control form-control-sm" type="number" id="f4" value="0"></div>
+                            <div class="form-group text-center row"><label class="text-uppercase labels">Rango Fin de Iteración</label><input class="form-control form-control-sm" type="number" id="f5" step="0.01" value="0.50"></div>
+                            <div class="form-group text-center d-xl-flex justify-content-xl-center row"><button onclick="click_resultados()" class="btn btn-primary d-xl-flex justify-content-xl-center" id="calcular" type="button">Calcular</button></div>
+                        </form>
+                    </div>
+                    <div class="col-md-6"><img src="assets/img/Logo%20vertical.png"></div>
+                </div>
+            </div>
+            <div class="container hero" id="resultados">
+                <div class="row">
+                    <div class="col-md-6" id="div-resultados"><a href="#"><i class="icon ion-arrow-left-b d-none" style="font-size: 65px;color: rgb(255,255,255);"></i></a><label class="titulo-resultado">resumen de resultados</label>
+                        <form class="labels" style="margin-right: -5%;margin-left: 5%;margin-top: 10%;margin-bottom: 10%;">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th class="blue">Column 1</th>
+                                            <th>Column 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="blue">VOLUMEN APARENTE (M3 Ap)</td>
+                                            <td id="r1">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="blue">DENSIDAD A GRANEL <br>VERDE (TON/M3)</td>
+                                            <td id="r2">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="blue">PORCENTAJE PESO SECO</td>
+                                            <td id="r3">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="blue">PRESIÓN PROMEDIO (TON/M2)</td>
+                                            <td id="r4">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th class="blue">Column 1</th>
+                                            <th>Column 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="blue">DENSIDAD A GRANEL<br>ANHIDRA (BDMT/M3 Ap)</td>
+                                            <td id="r5">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th class="blue">Column 1</th>
+                                            <th>Column 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="blue">BDMT</td>
+                                            <td id="r6">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th class="blue">Column 1</th>
+                                            <th>Column 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="blue">% COMPACTACIÓN</td>
+                                            <td id="r7">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group text-center d-xl-flex justify-content-xl-center row"><a class="btn btn-primary border-dark d-xl-flex justify-content-xl-center" onclick="click_volver1()"role="button" id="calcular" href="#" style="color: rgb(0,0,0);">Volver</a>
+<button class="btn btn-primary border-dark d-xl-flex justify-content-xl-center" data-bs-hover-animate="pulse" id="volver" type="submit" style="color: rgb(0,0,0);">Imprimir</button></div>
+                        </form>
+                    </div>
+                    <div class="col-md-6"><label class="titulo-resultado">tabla de resultados</label>
+                        <div class="table-responsive resultados2">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="blue">PRESIÓN UTILIZADA<br>(TON/M3 Ap)</th>
+                                        <th class="blue">DENSIDAD A GRANEL VERDE (TON/M3 Ap)</th>
+                                        <th class="blue">DENSIDAD A GRANEL <br>ANHIDRA (BDMT/M3 Ap)</th>
+                                        <th class="blue">% COMPACTACIÓN</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla_resultados" class="blanco">
+                                    <tr>
+                                        <td></td>
+                                        <td class="blanco"></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><label class="titulo-resultado">promedio</label>
+                        <div class="table-responsive resultados2">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="blue">PRESIÓN UTILIZADA<br>(TON/M3 Ap)</th>
+                                        <th class="blue">DENSIDAD A GRANEL VERDE (TON/M3 Ap)</th>
+                                        <th class="blue">DENSIDAD A GRANEL <br>ANHIDRA (BDMT/M3 Ap)</th>
+                                        <th class="blue">% COMPACTACIÓN</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="blanco">
+                                    <tr>
+                                        <td id="r8"></td>
+                                        <td id="r9" class="blanco"></td>
+                                        <td id="r10"></td>
+                                        <td id="r11"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  <div id="boton_grafico" onclick="click_graficos()" style="display:none;background-color:rgb(37,82,170)"class="fab">
+        <a href="#graficos"><i style="font-size: 30px; color: white" class="fas fa-chart-line"></i></a>
+    </div>
+  <div id="boton_volver2"  onclick="click_volver2()" style="display:none;background-color:rgb(37,82,170)"class="fab">
+        <a href="#resultados"><i style="font-size: 30px; color: white" class="fas fa-undo-alt"></i></a>
+    </div>
+
+            <div class="container hero" id="graficos">
+                <div class="row">
+                    <div class="col-4 col-md-6 col-xl-4 text-center">
+                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;],&quot;fill&quot;:true}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;reverse&quot;:true},&quot;title&quot;:{&quot;display&quot;:true,&quot;text&quot;:&quot;Densidad a Granel Verde según Presión  (Resultados Laboratorio)&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true,&quot;drawOnChartArea&quot;:true}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true}}]}}}"></canvas></div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;],&quot;fill&quot;:true}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:true,&quot;text&quot;:&quot;Densidad a Granel Anhidra según Presión (Resultados Laboratorio)&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true,&quot;drawOnChartArea&quot;:true}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true}}]}}}"></canvas></div>
+                    </div>
+                    <div class="col-4 col-md-6 col-xl-4">
+                        <div><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;],&quot;fill&quot;:true}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:true,&quot;text&quot;:&quot;% Compactación según Presión (Resultados Laboratorio)&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true,&quot;drawOnChartArea&quot;:true}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:true}}]}}}"></canvas></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="datos-estimacion">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-uppercase">Parametros para estimación</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="color: rgb(0,0,0);"><!-- Editable table -->
+<div class="card">
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table id="parametros" class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center">Presión (I.D)</th>
+            <th class="text-center">Presión Utilizada (TON/M2)</th>
+            <th class="text-center">Densidad a Granel Verde (TON/M3 Ap)</th>
+            <th class="text-center">% Compactación</th>
+            <th class="text-center">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-3-half presion1" contenteditable="true">1</td>
+            <td class="pt-3-half presion2" contenteditable="true">0</td>
+            <td class="pt-3-half densidad" contenteditable="true">0.352</td>
+            <td class="pt-3-half compactacion" contenteditable="true">0</td>
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">Eliminar</button></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pt-3-half presion1" contenteditable="true">2</td>
+            <td class="pt-3-half presion2" contenteditable="true">1</td>
+            <td class="pt-3-half densidad" contenteditable="true">0.435</td>
+            <td class="pt-3-half compactacion" contenteditable="true">0</td>
+            <td>
+              <span class="table-remove"><button type="button"
+                                                 class="btn btn-danger btn-rounded btn-sm my-0">Eliminar</button></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pt-3-half presion1" contenteditable="true">3</td>
+            <td class="pt-3-half presion2" contenteditable="true">4</td>
+            <td class="pt-3-half densidad" contenteditable="true">0.502</td>
+            <td class="pt-3-half compactacion" contenteditable="true">0</td>
+            <td>
+              <span class="table-remove"><button type="button"
+                                                 class="btn btn-danger btn-rounded btn-sm my-0">Eliminar</button></span>
+            </td>
+          </tr>
+          <!-- This is our clonable table line -->
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->
+</div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">Guardar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Modal-commerce-popup-button.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/tabla.js"></script>
+    <script src="assets/js/Table-with-search.js"></script>
+</body>
+
+</html>
